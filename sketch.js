@@ -19,7 +19,7 @@ function draw() {
   let x = (width - w) / 2;
   let y = (height - h) / 2;
 
-  let stepSize = 15; // 可自行調整
+  let stepSize = 300; // 可自行調整
 
   cam.loadPixels();
 
