@@ -18,7 +18,11 @@ function draw() {
   let x = (width - w) / 2;
   let y = (height - h) / 2;
 
-  image(cam, x, y, w, h);
+  push(); // 儲存目前的座標狀態
+  translate(x + w, y); // 將原點移至影像預計出現的右側
+  scale(-1, 1); // 水平翻轉座標系
+  image(cam, 0, 0, w, h); // 在翻轉後的座標系繪製影像
+  pop(); // 恢復原始座標狀態，以免影響後續繪圖
 }
 
 function windowResized() {
